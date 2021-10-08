@@ -25,7 +25,7 @@ const App: () => Node = () => {
 
   useEffect(() => {
     (async () => {
-      await RemoteConfigService.init(false);
+      await RemoteConfigService.init();
 
       setRemoteConfigValue(await RemoteConfigService.getParams());
     })();
